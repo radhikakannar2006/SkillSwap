@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="160dp"
+    android:viewportWidth="160"
+    android:viewportHeight="160">
+
+    <!-- Soft Green Background Circle Accent -->
+    <path
+        android:fillColor="#A7D7C5"
+        android:pathData="M80,80m-60,0a60,60 0 1,0 120,0a60,60 0 1,0 -120,0"/>
+
+    <!-- Left Hand / Arm -->
+    <path
+        android:fillColor="#2E7D5B"
+        android:pathData="M50,110 L68,85 L76,92 L62,118 Z"/>
+    <!-- Left Hand Fingers -->
+    <path
+        android:fillColor="#2E7D5B"
+        android:pathData="M68,85 L76,68 C78,64 83,67 82,72 L76,88 Z"/>
+
+    <!-- Right Hand / Arm -->
+    <path
+        android:fillColor="#1F2937"
+        android:pathData="M110,110 L92,85 L84,92 L98,118 Z"/>
+    <!-- Right Hand Fingers -->
+    <path
+        android:fillColor="#1F2937"
+        android:pathData="M92,85 L84,68 C82,64 77,67 78,72 L84,88 Z"/>
+
+    <!-- Sparkles / Glow Lines -->
+    <path
+        android:fillColor="#2E7D5B"
+        android:pathData="M80,45 L80,55 M70,50 L75,57 M90,50 L85,57"
+        android:strokeColor="#2E7D5B"
+        android:strokeWidth="3"/>
+</vector>

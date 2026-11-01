@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Top Drag Handle Indicator -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_rounded_card"
+        android:backgroundTint="#CBD5E1" />
+
+    <!-- Title & Score Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_match_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="sans-serif-bold"
+            android:text="AI Compatibility Match"
+            android:textColor="#0F172A"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_match_score_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#DCFCE7"
+            android:fontFamily="sans-serif-bold"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="95% Match ✨"
+            android:textColor="#166534"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!-- AI Summary Box -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="#F0FDF4"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="#BBF7D0"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_ai_summary_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Ananya is an ideal match for your learning goals! Both of you offer complementary skills and matching availability."
+                android:textColor="#166534"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_matched_skills_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Direct 2-Way Match: Python ⇄ UI Design"
+                android:textColor="#15803D"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="sans-serif-bold"
+        android:text="Detailed Score Breakdown"
+        android:textColor="#334155"
+        android:textSize="15sp" />
+
+    <!-- Bar 1: Skill Match -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skill Complementarity"
+                android:textColor="#475569"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_bar1_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="38 / 40"
+                android:textColor="#1E293B"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_skill_match"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:progress="95"
+            app:indicatorColor="#2E7D5B"
+            app:trackColor="#E2E8F0"
+            app:trackCornerRadius="4dp" />
+
+    </LinearLayout>
+
+    <!-- Bar 2: Mentor Experience -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mentor Rank &amp; Experience"
+                android:textColor="#475569"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_bar2_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="18 / 20"
+                android:textColor="#1E293B"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_mentor_match"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:progress="90"
+            app:indicatorColor="#2563EB"
+            app:trackColor="#E2E8F0"
+            app:trackCornerRadius="4dp" />
+
+    </LinearLayout>
+
+    <!-- Bar 3: Availability & Proximity -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Availability &amp; Location Synergy"
+                android:textColor="#475569"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_bar3_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="19 / 20"
+                android:textColor="#1E293B"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_synergy_match"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:progress="95"
+            app:indicatorColor="#D97706"
+            app:trackColor="#E2E8F0"
+            app:trackCornerRadius="4dp" />
+
+    </LinearLayout>
+
+    <!-- Bar 4: Community Trust -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Community Trust &amp; Activity"
+                android:textColor="#475569"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_bar4_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="20 / 20"
+                android:textColor="#1E293B"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_trust_match"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:progress="100"
+            app:indicatorColor="#059669"
+            app:trackColor="#E2E8F0"
+            app:trackCornerRadius="4dp" />
+
+    </LinearLayout>
+
+    <!-- Action Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_close_breakdown"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:backgroundTint="#2E7D5B"
+        android:fontFamily="sans-serif-medium"
+        android:text="Got It"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

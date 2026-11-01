@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    
+    <!-- Background Circle Accent -->
+    <path
+        android:fillColor="#A7D7C5"
+        android:pathData="M100,100m-80,0a80,80 0 1,0 160,0a80,80 0 1,0 -160,0"/>
+
+    <!-- Inner Circle Card -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,100m-60,0a60,60 0 1,0 120,0a60,60 0 1,0 -120,0"/>
+
+    <!-- Left Skill Card Badge -->
+    <path
+        android:fillColor="#2E7D5B"
+        android:pathData="M65,75h30v30h-30z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,83h10v2h-10zm0,6h10v2h-10zm0,6h6v2h-6z"/>
+
+    <!-- Right Skill Card Badge -->
+    <path
+        android:fillColor="#2E7D5B"
+        android:pathData="M105,95h30v30h-30z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M113,103h14v2h-14zm0,6h10v2h-10zm0,6h6v2h-6z"/>
+
+    <!-- Exchange Swap Arrows -->
+    <path
+        android:fillColor="#1F2937"
+        android:pathData="M75,60h50v6h-50zm35,-8l15,11l-15,11zM125,140h-50v-6h50zm-35,8l-15,-11l15,-11z"/>
+</vector>

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_background"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="48dp">
+
+        <!-- Top Navigation Bar -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_back_profile"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="21dp"
+            app:cardElevation="1.5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:id="@+id/btn_back_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:padding="10dp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/dark_text" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_screen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="User Profile"
+            android:textColor="@color/dark_text"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/card_back_profile"
+            app:layout_constraintStart_toEndOf="@id/card_back_profile"
+            app:layout_constraintTop_toTopOf="@id/card_back_profile" />
+
+        <!-- User Header Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_user_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_back_profile"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="24dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_other_user_avatar"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:contentDescription="Profile Photo"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                    app:strokeColor="@color/primary_green_subtle"
+                    app:strokeWidth="2.5dp" />
+
+                <TextView
+                    android:id="@+id/tv_other_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/dark_text"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    tools:text="Alex Rivera" />
+
+                <TextView
+                    android:id="@+id/tv_other_user_headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/muted_text"
+                    android:textSize="13.5sp"
+                    tools:text="San Francisco, CA • Weekends &amp; Evenings" />
+
+                <TextView
+                    android:id="@+id/tv_user_coin_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_rounded_card"
+                    android:backgroundTint="#FEF3C7"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="#92400E"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:text="💰 10 SkillCoins"
+                    tools:visibility="visible" />
+
+                <!-- Mentor Rank Badge -->
+                <TextView
+                    android:id="@+id/tv_user_mentor_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_rounded_card"
+                    android:backgroundTint="@color/light_green_surface"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/primary_green"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:text="Rank: Mentor" />
+
+                <!-- AI Match Insights Badge -->
+                <TextView
+                    android:id="@+id/tv_ai_match_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_rounded_card"
+                    android:backgroundTint="#DCFCE7"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="6dp"
+                    android:textColor="#166534"
+                    android:textSize="12.5sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:text="95% AI Match ✨ · View Breakdown"
+                    tools:visibility="visible" />
+
+                <!-- Overall Average Rating (Hidden if no ratings/reviews) -->
+                <LinearLayout
+                    android:id="@+id/layout_user_overall_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_rounded_card"
+                    android:backgroundTint="@color/light_green_surface"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_star"
+                        app:tint="@color/warning_orange" />
+
+                    <TextView
+                        android:id="@+id/tv_user_overall_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/dark_text"
+                        android:textSize="13.5sp"
+                        android:textStyle="bold"
+                        tools:text="4.8" />
+
+                    <TextView
+                        android:id="@+id/tv_user_reviews_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/muted_text"
+                        android:textSize="12sp"
+                        tools:text="(3 reviews)" />
+                </LinearLayout>
+
+                <!-- Swap Status Banner -->
+                <TextView
+                    android:id="@+id/tv_swap_status_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_rounded_card"
+                    android:backgroundTint="@color/status_active_bg"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="5dp"
+                    android:text="Matched Swap Partner"
+                    android:textColor="@color/status_active_text"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <!-- Action Buttons Container -->
+                <LinearLayout
+                    android:id="@+id/layout_action_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!-- Request Swap Button -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_request_swap_action"
+                            style="@style/Widget.SkillSwap.Button"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="Request Swap"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:cornerRadius="14dp"
+                            app:icon="@drawable/ic_swap_exchange"
+                            app:iconGravity="textStart"
+                            app:iconTint="@color/white" />
+
+                        <!-- Direct Chat Button (Unlocked only when accepted) -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_message_action"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/light_green_surface"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Message"
+                            android:textColor="@color/primary_green"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:cornerRadius="14dp"
+                            app:icon="@drawable/ic_chat"
+                            app:iconGravity="textStart"
+                            app:iconTint="@color/primary_green"
+                            app:strokeColor="@color/primary_green_subtle"
+                            app:strokeWidth="1dp" />
+
+                        <!-- End Swap Button (Unlocked only when accepted) -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_end_swap_action"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="End Swap"
+                            android:textColor="@color/error_red"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            app:cornerRadius="14dp"
+                            app:icon="@drawable/ic_close"
+                            app:iconGravity="textStart"
+                            app:iconTint="@color/error_red"
+                            app:strokeColor="@color/error_red" />
+
+                    </LinearLayout>
+
+                    <!-- Rate & Give Feedback Button (Available after swap) -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_rate_user_action"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/light_green_surface"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Rate &amp; Give Feedback"
+                        android:textColor="@color/primary_green"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:cornerRadius="14dp"
+                        app:icon="@drawable/ic_star"
+                        app:iconGravity="textStart"
+                        app:iconTint="@color/warning_orange"
+                        app:strokeColor="@color/primary_green_subtle"
+                        app:strokeWidth="1dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Private Profile Notice Card (Shown only when profile is private and viewer is not a swap partner) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_private_profile_notice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1.5dp"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_user_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="36dp">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/ic_lock"
+                    app:tint="@color/muted_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="This Profile is Private"
+                    android:textColor="@color/dark_text"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_private_profile_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Swap with them to view their profile."
+                    android:textColor="@color/muted_text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Skills I Can Teach Section -->
+        <TextView
+            android:id="@+id/tv_other_teach_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Skills They Can Teach"
+            android:textColor="@color/dark_text"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_user_header" />
+
+        <TextView
+            android:id="@+id/tv_empty_other_teach"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif"
+            android:text="No teaching skills listed yet."
+            android:textColor="@color/muted_text"
+            android:textSize="13.5sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_other_teach_label" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_other_skills_teach"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_empty_other_teach"
+            tools:listitem="@layout/item_skill_chip" />
+
+        <!-- Skills I Want to Learn Section -->
+        <TextView
+            android:id="@+id/tv_other_learn_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Skills They Want to Learn"
+            android:textColor="@color/dark_text"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_other_skills_teach" />
+
+        <TextView
+            android:id="@+id/tv_empty_other_learn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif"
+            android:text="No learning skills listed yet."
+            android:textColor="@color/muted_text"
+            android:textSize="13.5sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_other_learn_label" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_other_skills_learn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_empty_other_learn"
+            tools:listitem="@layout/item_skill_chip" />
+
+        <!-- About Me Section -->
+        <TextView
+            android:id="@+id/tv_other_about_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="About"
+            android:textColor="@color/dark_text"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_other_skills_learn" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_other_about"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_other_about_label"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/tv_other_about_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="4dp"
+                android:padding="18dp"
+                android:textColor="@color/dark_text"
+                android:textSize="14sp"
+                tools:text="I love coding and exchanging knowledge. Let's learn together!" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Ratings & Feedback Section (Hidden if no reviews) -->
+        <TextView
+            android:id="@+id/tv_other_feedback_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Ratings &amp; Feedback"
+            android:textColor="@color/dark_text"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_other_about" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_user_reviews"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:nestedScrollingEnabled="false"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_other_feedback_label"
+            tools:listitem="@layout/item_user_review" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Subtle White Outer Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M54,54m-34,0a34,34 0,1 1,68 0a34,34 0,1 1,-68 0" />
+
+    <!-- Top Exchange Ribbon / Arrow (Light Mint Accent) -->
+    <path
+        android:fillColor="#A7D7C5"
+        android:pathData="M39,39 C44,32 60,30 68,39 C72,43 74,47 72,51 L77,51 C79,44 75,37 70,32 C58,22 39,24 33,33 L29,28 L26,43 L41,41 Z" />
+
+    <!-- Bottom Exchange Ribbon / Arrow (Pure White) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M69,69 C64,76 48,78 40,69 C36,65 34,61 36,57 L31,57 C29,64 33,71 38,76 C50,86 69,84 75,75 L79,80 L82,65 L67,67 Z" />
+
+    <!-- Central Interlocking Diamond Accent -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,46 L62,54 L54,62 L46,54 Z" />
+
+    <path
+        android:fillColor="#A7D7C5"
+        android:pathData="M54,50 L58,54 L54,58 L50,54 Z" />
+
+</vector>

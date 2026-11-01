@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Color Palette (Skill Swap Platform) -->
+    <color name="primary_green">#2E7D5B</color>
+    <color name="light_green_accent">#A7D7C5</color>
+    <color name="cream_background">#F9F7F3</color>
+    <color name="dark_text">#1F2937</color>
+    <color name="muted_text">#6B7280</color>
+    <color name="error_warning">#EF4444</color>
+    <color name="error_red">#EF4444</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Aliases for convenience across layouts -->
+    <color name="background_cream">@color/cream_background</color>
+    <color name="light_green">@color/light_green_accent</color>
+    <color name="text_dark">@color/dark_text</color>
+    <color name="text_muted">@color/muted_text</color>
+    <color name="text_secondary">@color/muted_text</color>
+    <color name="error_color">@color/error_warning</color>
+
+    <!-- UI Component & Functional Colors -->
+    <color name="card_stroke">#E5E7EB</color>
+    <color name="chip_background">#EFECE6</color>
+    <color name="input_background">#FFFFFF</color>
+    <color name="rating_gold">#F59E0B</color>
+    <color name="warning_orange">#F59E0B</color>
+
+    <!-- Material Theme Mappings -->
+    <color name="colorPrimary">@color/primary_green</color>
+    <color name="colorOnPrimary">@color/white</color>
+    <color name="colorPrimaryContainer">@color/light_green_accent</color>
+    <color name="colorOnPrimaryContainer">@color/dark_text</color>
+    <color name="colorSecondary">@color/light_green_accent</color>
+    <color name="colorOnSecondary">@color/dark_text</color>
+    <color name="colorSurface">@color/white</color>
+    <color name="colorOnSurface">@color/dark_text</color>
+    <color name="colorSurfaceVariant">@color/cream_background</color>
+    <color name="colorOnSurfaceVariant">@color/muted_text</color>
+    <color name="colorError">@color/error_warning</color>
+    <color name="colorOnError">@color/white</color>
+
+    <!-- Modern Tint Utilities -->
+    <color name="primary_green_subtle">#E8F5E9</color>
+    <color name="light_green_surface">#F0FDF4</color>
+    <color name="status_active_bg">#D1FAE5</color>
+    <color name="status_active_text">#047857</color>
+    <color name="status_pending_bg">#FEF3C7</color>
+    <color name="status_pending_text">#B45309</color>
+</resources>

@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme (Night configuration). -->
+    <style name="Base.Theme.SkillSwapProject" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/light_green_accent</item>
+        <item name="colorOnPrimaryContainer">@color/dark_text</item>
+        <item name="colorSecondary">@color/light_green_accent</item>
+        <item name="colorOnSecondary">@color/dark_text</item>
+
+        <item name="android:windowBackground">@color/cream_background</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/dark_text</item>
+        <item name="colorSurfaceVariant">@color/cream_background</item>
+        <item name="colorOnSurfaceVariant">@color/muted_text</item>
+
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+
+        <item name="materialButtonStyle">@style/Widget.SkillSwap.Button</item>
+        <item name="textInputStyle">@style/Widget.SkillSwap.TextInputLayout</item>
+    </style>
+</resources>

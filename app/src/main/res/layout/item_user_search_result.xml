@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="1.5dp"
+    app:strokeColor="@color/card_stroke"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp">
+
+        <!-- Avatar Container -->
+        <FrameLayout
+            android:id="@+id/layout_search_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvSearchAvatarInitial"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_avatar_circle"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivSearchAvatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                app:strokeColor="@color/primary_green_subtle"
+                app:strokeWidth="1.5dp" />
+        </FrameLayout>
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/tvSearchUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/dark_text"
+            android:textSize="15.5sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvSearchSkillsSummary"
+            app:layout_constraintEnd_toStartOf="@id/tvSearchMatchBadge"
+            app:layout_constraintStart_toEndOf="@id/layout_search_avatar"
+            app:layout_constraintTop_toTopOf="@id/layout_search_avatar"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Alex Morgan" />
+
+        <!-- AI Match Badge Chip -->
+        <TextView
+            android:id="@+id/tvSearchMatchBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_rounded_card"
+            android:backgroundTint="#DCFCE7"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="3dp"
+            android:text="92% Match ✨"
+            android:textColor="#166534"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/tvSearchUserName"
+            app:layout_constraintEnd_toStartOf="@id/iv_chevron"
+            app:layout_constraintTop_toTopOf="@id/tvSearchUserName"
+            tools:visibility="visible" />
+
+        <!-- Skills Summary -->
+        <TextView
+            android:id="@+id/tvSearchSkillsSummary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:textColor="@color/muted_text"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/layout_search_avatar"
+            app:layout_constraintEnd_toStartOf="@id/iv_chevron"
+            app:layout_constraintStart_toEndOf="@id/layout_search_avatar"
+            app:layout_constraintTop_toBottomOf="@id/tvSearchUserName"
+            tools:text="Teaches: Java, Kotlin · Learns: UI Design" />
+
+        <!-- Profile Navigation Chevron -->
+        <ImageView
+            android:id="@+id/iv_chevron"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/bg_icon_container_tinted"
+            android:padding="6dp"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primary_green" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

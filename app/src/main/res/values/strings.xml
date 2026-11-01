@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Skill Swap</string>
+    <!-- Web Client ID for Firebase Google Sign-In. Populated by google-services.json as default_web_client_id or manually here -->
+    <string name="google_web_client_id" translatable="false">660214780194-mhnn1eljk1089mkfhmqjqk4u319qgsq0.apps.googleusercontent.com</string>
+</resources>
